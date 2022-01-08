@@ -24,3 +24,4 @@ CREATE TABLE Professeur(
 );
 ```
 # Interface
+![javapor](https://user-images.githubusercontent.com/70094556/148646248-0c73e884-68df-4178-8206-4e0f4ea2ffc1.png)
