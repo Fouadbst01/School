@@ -205,8 +205,14 @@ public class ProfViewController implements Initializable {
        searchFiled.setOnMouseClicked(new EventHandler<MouseEvent>() {
            @Override
            public void handle(MouseEvent mouseEvent) {
-               OldData=FXCollections.observableArrayList();
-               OldData.addAll(prolist);
+               if(flag){
+                   prolist.clear();
+                   prolist.addAll(OldData);
+                   searchFiled.setText("");
+               }else{
+                   OldData=FXCollections.observableArrayList();
+                   OldData.addAll(prolist);
+               }
                flag=true;
                ((Node)mouseEvent.getTarget()).getScene().setOnMouseClicked(new EventHandler<MouseEvent>() {
                    @Override
@@ -223,6 +229,7 @@ public class ProfViewController implements Initializable {
                });
            }
        });
+
 
     }
 }
