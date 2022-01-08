@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="FormPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp2_.Controller.FomeProfController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="469.0" prefWidth="493.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="150.0" text="Nom">
+                     <font>
+                        <Font name="Bauhaus 93" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nom" promptText="nom" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="150.0" text="Prenom">
+                     <font>
+                        <Font name="Bauhaus 93" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="prenom" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="28.0" prefWidth="279.0">
+               <children>
+                  <Label prefWidth="150.0" text="Cin">
+                     <font>
+                        <Font name="Bauhaus 93" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="cin" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="279.0">
+               <children>
+                  <Label prefWidth="150.0" text="Telephone">
+                     <font>
+                        <Font name="Bauhaus 93" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="tele" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="279.0">
+               <children>
+                  <Label prefWidth="150.0" text="Email">
+                     <font>
+                        <Font name="Bauhaus 93" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="emeil" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="279.0">
+               <children>
+                  <Label prefWidth="150.0" text="Date recrutement">
+                     <font>
+                        <Font name="Bauhaus 93" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="149.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="29.0" prefWidth="279.0">
+               <children>
+                  <Label prefWidth="150.0" text="Deparetement">
+                     <font>
+                        <Font name="Bauhaus 93" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="deptSelect" prefHeight="25.0" prefWidth="155.0" styleClass=".combo-box-popup &gt; .list-view {    -fx-pref-width: 100;}" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="127.0" prefWidth="335.0">
+               <children>
+                  <Label prefWidth="150.0" text="Adresse">
+                     <font>
+                        <Font name="Bauhaus 93" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextArea fx:id="adressTextarea" prefHeight="127.0" prefWidth="153.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="548.0">
+               <children>
+                  <Button fx:id="Confirme" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Confirmer" />
+                  <Button fx:id="Cancel" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="100.0" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
