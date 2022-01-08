@@ -1,7 +1,7 @@
 # School
 Manage professor and departement using java and java fx
 
-## Database Script (MySQL)
+# Database Script (MySQL)
 ```SQL
 CREATE DATABASE Ecole;
 
@@ -23,3 +23,4 @@ CREATE TABLE Professeur(
     FOREIGN KEY (id_dept) REFERENCES Deparetement(id_dept)
 );
 ```
+# Interface
