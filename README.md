@@ -23,5 +23,27 @@ CREATE TABLE Professeur(
     FOREIGN KEY (id_dept) REFERENCES Deparetement(id_dept)
 );
 ```
-# Interface
-![javapor](https://user-images.githubusercontent.com/70094556/148646248-0c73e884-68df-4178-8206-4e0f4ea2ffc1.png)
+
+# Add test data to DataBase
+> - Call AddFakeData Function in the main function and execute it
+> 
+> - AddFakerData Function generate FakeData and push it in ur DB
+> - you must call it one time otherwise each call will add data to ud DB
+```java
+public static void main(String[] args) {
+        AddFakeData();
+    }
+```
+
+# Don't forget to load maven dependencies
+> - For Intellij IDEA
+> 
+![Capture d’écran 2022-01-09 114700](https://user-images.githubusercontent.com/70094556/148682554-fae658cb-0e47-4aad-96a1-e885b33a54c3.png)
+
+# Interfaces
+> - Professor
+> 
+![Capture d’écran 2022-01-09 123304](https://user-images.githubusercontent.com/70094556/148682523-67de371a-84f5-47ee-9942-55369d270411.png)
+> - Department
+> 
+![Capture d’écran 2022-01-09 123324](https://user-images.githubusercontent.com/70094556/148682312-6668cdf7-581a-46a1-8b85-028cfb7eaf34.png)
