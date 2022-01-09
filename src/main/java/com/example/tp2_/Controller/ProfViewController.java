@@ -198,7 +198,7 @@ public class ProfViewController implements Initializable {
         searchFiled.textProperty().addListener((observable, oldValue, newValue) ->{
             prolist.clear();
             prolist.addAll(OldData);
-            List l = prolist.stream().filter(dept  -> !dept.getNom().contains(observable.getValue())).collect(Collectors.toList());
+            List l = prolist.stream().filter(dept  -> !dept.getNom().toLowerCase().startsWith(observable.getValue().toLowerCase())).collect(Collectors.toList());
             prolist.removeAll(l);
         });
 
