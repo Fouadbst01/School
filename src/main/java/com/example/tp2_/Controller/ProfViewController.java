@@ -181,8 +181,8 @@ public class ProfViewController implements Initializable {
                     alert.setHeaderText("do u want to delete this instance ?");
                     Optional<ButtonType> op = alert.showAndWait();
                     if(op.get() == ButtonType.OK) {
-                        prolist.remove(indice);
                         new ProfesseurCRUD().Supp(tableProf.getSelectionModel().getSelectedItem().getId_prof());
+                        prolist.remove(indice);
                     }else{
                         alert.close();
                     }

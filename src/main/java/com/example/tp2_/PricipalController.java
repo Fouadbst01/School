@@ -1,7 +1,13 @@
 package com.example.tp2_;
 
 import com.example.tp2_.Controller.ProfViewController;
+import com.example.tp2_.metier.Departement;
+import com.example.tp2_.metier.Professeur;
+import com.example.tp2_.metierCRUD.DeparetementCRUD;
+import com.example.tp2_.metierCRUD.ProfesseurCRUD;
+import com.github.javafaker.Faker;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,9 +23,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
 
+
 import java.io.IOException;
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class PricipalController extends Application implements Initializable {
     @FXML
@@ -47,6 +54,36 @@ public class PricipalController extends Application implements Initializable {
     private double PosY = 0;
     private Scene scene;
 
+    private static void AddFakeData(){
+        //change fr to get data in french
+        Faker faker = new Faker(new Locale("en"));
+        //Add Departement Data
+        List<Departement> depList= new ArrayList<>();
+
+        DeparetementCRUD depCRUD = new DeparetementCRUD();
+
+        for(int i=0;i<10;i++){
+            Departement dep = new Departement(faker.educator().course());
+            int id=depCRUD.Add(dep);
+            dep.setId_depart(id);
+            depList.add(dep);
+        }
+        //Professor data
+        Professeur p=new Professeur();
+        ProfesseurCRUD pcurud = new ProfesseurCRUD();
+        for(int i=0;i<100;i++){
+            p.setNom(faker.name().firstName());
+            p.setPrenom(faker.name().lastName());
+            p.setEmail(faker.internet().emailAddress());
+            p.setAdresse(faker.address().fullAddress());
+            p.setCin(faker.random().hex(6));
+            p.setTelephone(faker.phoneNumber().phoneNumber());
+            p.setDate_recrutement(faker.date().between(new Date(1999,1,1),new Date(2022,1,1)));
+            p.setDept(depList.get(faker.random().nextInt(depList.size())));
+            pcurud.Add(p);
+        }
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
         stage.initStyle(StageStyle.UNDECORATED);
@@ -58,6 +95,7 @@ public class PricipalController extends Application implements Initializable {
     }
 
     public static void main(String[] args) {
+        //AddFakeData();
         launch();
     }
 

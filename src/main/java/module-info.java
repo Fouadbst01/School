@@ -2,7 +2,7 @@ module com.example.tp2_ {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-
+    requires javafaker;
 
     opens com.example.tp2_ to javafx.fxml;
     exports com.example.tp2_;
